@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app').directive('appPositionClass',[function(){
+angular.module('app').directive('appPositionClass', [function() {
 	return {
 		restrict: 'A',
 		replace: true,
@@ -8,15 +8,15 @@ angular.module('app').directive('appPositionClass',[function(){
 		scope: {
 			com: '='
 		},
-		link: function($scope){
-			$scope.showPositionList = function(index){
-				console.log($scope);
+		link: function($scope) {
+			$scope.showPositionList = function(index) {
+				//console.log($scope);
 				$scope.positionList = $scope.com.positionClass[index].positionList;
 				$scope.isActive = index;
 			}
-			$scope.$watch('com', function(newVal){
-	        	if(newVal) $scope.showPositionList(0);
-	     	});
+			$scope.$watch('com', function(newVal) {
+				if (newVal) $scope.showPositionList(0);
+			});
 		}
 	}
 }]);
