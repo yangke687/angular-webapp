@@ -6,7 +6,7 @@ angular.module('app')
 			$scope.isLogin = false;
 			$scope.im();
 			cache.put('to', 'day');
-			$http.get('/data/position-' + $state.params.id + '.json')
+			$http.get('/data/position.json?id=' + $state.params.id)
 				.then(function(res) {
 					console.log('position:', res.data);
 					$scope.position = res.data;
