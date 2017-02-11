@@ -1,5 +1,8 @@
 <ul class="tab">
-	<li class="d-ib ta-c active">城市</li>
-	<li class="d-ib ta-c">薪酬</li>
-	<li class="d-ib ta-c">公司规模</li>
+	<li 
+		ng-click="click(item);"
+		ng-repeat="item in list"
+		class="d-ib ta-c {{ selectedId===item.id ? 'active' : '' }}" 
+		ng-bind="item.name">
+	</li>
 </ul>

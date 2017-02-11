@@ -5,6 +5,11 @@ angular.module('app')
 		return {
 			restrict: 'A',
 			replace: true,
-			templateUrl: 'view/template/sheet.html'
+			templateUrl: 'view/template/sheet.html',
+			scope: {
+				list: '=',
+				isVisible: '=',
+				select: '&'
+			}
 		};
 	}]);
