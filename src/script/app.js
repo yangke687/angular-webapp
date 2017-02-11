@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app', ['ui.router']).run(['$rootScope', function($rootScope) {
+angular.module('app', ['ui.router', 'ngCookies']).run(['$rootScope', function($rootScope) {
 	$rootScope.im = function() {
 		console.log('im');
 	}
