@@ -13,7 +13,7 @@ angular.module('app').directive('appTab', [function() {
 			$scope.click = function(item) {
 				$scope.selectedId = item.id;
 				$scope.tabClick(item); // 通知父级元素
-				console.log($scope.tabClick);
+				//console.log($scope.tabClick);
 			}
 		}
 	}
