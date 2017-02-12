@@ -24,7 +24,7 @@ angular.module('app')
 				tabId = id;
 				$scope.sheet.list = dict[id];
 				$scope.sheet.visible = true;
-				console.log($scope.sheet.list);
+				//console.log($scope.sheet.list);
 			};
 			$scope.sClick = function(id, name) {
 				//console.log(id, name);
@@ -38,17 +38,18 @@ angular.module('app')
 				} else { // 不限
 					delete $scope.filterObj[tabId + 'Id'];
 					angular.forEach($scope.tabList, function(item) {
-						switch (item.id) {
-							case 'city':
-								item.name = '城市';
-								break;
-							case 'salary':
-								item.name = '薪酬';
-								break;
-							case 'scale':
-								item.name = '公司规模';
-								break;
-						}
+						if (tabId === item.id)
+							switch (item.id) {
+								case 'city':
+									item.name = '城市';
+									break;
+								case 'salary':
+									item.name = '薪酬';
+									break;
+								case 'scale':
+									item.name = '公司规模';
+									break;
+							}
 					})
 				}
 			}
