@@ -1,0 +1,69 @@
+.login{
+	position: fixed;
+	background-image: url('../image/background.png');
+	background-size: 100% 100%;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	form{
+		.mt(260);
+		.form-line{
+			margin-left: auto;
+			margin-right: auto;
+			box-sizing: content-box;
+			.fs(0);
+			.w(300);
+			.h(40);
+			.lh(40);
+			&:first-child{
+				border-bottom: 1px solid @defaultColor;
+			}
+			span{
+				background-color: @iconBgColor;
+				background-position: 50% 50%;
+				height: 100%;
+				.w(55);
+			}
+			.account{
+				background-image: url('../image/account.png');
+				background-repeat: no-repeat;
+			}
+			.lock{
+				background-image: url('../image/lock.png');
+				background-repeat: no-repeat;
+			}
+			input{
+				background-color: @formBgColor;
+				border-width: 0;
+				color: @defaultColor;
+				outline-width: 0;
+				height: 100%;
+				box-sizing: border-box;
+				.w(245);
+				.fs(14);
+				.pl(30);
+				&::-webkit-input-placeholder{
+					color: @defaultColor;
+				}
+			}
+		}
+		button{
+			.w(300);
+			.h(35);
+			font-weight: bold;
+			font-size: 21px;
+			&.login-btn{
+				.mt(75);
+				background-color: @headBgColor;
+				color: @defaultColor;
+			}
+			&.register-btn{
+				.mt(25);
+				background-color: @btnBgColor;
+				color: @headBgColor;
+				border: 1px solid @headBgColor;
+			}
+		}
+	}
+}
