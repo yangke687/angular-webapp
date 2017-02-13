@@ -53,11 +53,15 @@ angular.module('app')
 					})
 				}
 			}
-			$http.get('/data/positionList.json')
-				.then(function(res) {
-					$scope.list = res.data;
-				}, function(err) {
-					// error handling...
-				});
+			$scope.search = function() {
+				console.log('search')
+				$http.get('/data/positionList.json')
+					.then(function(res) {
+						$scope.list = res.data;
+					}, function(err) {
+						// error handling...
+					});
+			}
+			$scope.search();
 		}
 	]);
