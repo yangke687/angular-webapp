@@ -81,11 +81,17 @@
 				}
 			}
 			.message{
-				.mt(18);
+				.mt(5);
 				.fs(14);
+				.h(20);
+				.w(60);
 				color: @headBgColor;
 				border: 1px solid @headBgColor;
-				padding: 0 5px;
+				padding: 5px 7px;
+				&.disabled{
+					color: @lineColor;
+					border-color: @lineColor;
+				}
 			}
 		}
 		button{
