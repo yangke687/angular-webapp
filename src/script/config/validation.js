@@ -6,6 +6,9 @@ angular.module('app').config(['$validationProvider', function($validationProvide
 		password: function(value) {
 			var str = value + '';
 			return str.length > 5;
+		},
+		required: function(value){
+			return !!value;
 		}
 	};
 	var defaultMsg = {
@@ -16,6 +19,10 @@ angular.module('app').config(['$validationProvider', function($validationProvide
 		password: {
 			success: '',
 			error: '密码长度至少是6位'
+		},
+		required: {
+			success: '',
+			error: '该项不能为空',
 		}
 	};
 	$validationProvider.setExpression(expression).setDefaultMsg(defaultMsg);
