@@ -1,7 +1,13 @@
 'use strict';
 angular.module('app').service('cache', ['$cookies', function($cookies) {
 	this.put = function(key, value) {
-		$cookies.put(key, value);
+		if (typeof(value) === 'object')
+			$cookies.putObject(key, value);
+		else
+			$cookies.put(key, value);
+	};
+	this.getObj = function(key) {
+		return $cookies.getObject(key);
 	};
 	this.get = function(key) {
 		return $cookies.get(key);
