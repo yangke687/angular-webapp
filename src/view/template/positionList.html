@@ -4,7 +4,7 @@
 		<p class="title" ng-bind="item.companyName+'['+item.cityName+'] '+item.industryName + ' ' +item.scaleName"></p>
 		<p class="text c-r" ng-bind="item.salaryName"></p>
 		<p class="text" ng-bind="item.date"></p>
-		<span ng-if="user" ng-click="$event.stopPropagation();select(item);" class="icon d-b p-a {{ item.select ? 'star-active' : 'star'}}"></span>
+		<span ng-if="isFavorite" ng-click="$event.stopPropagation();select(item);" class="icon d-b p-a {{ item.select ? 'star-active' : 'star'}}"></span>
 		<div class="claer"></div>
 	</li>
 </ul>

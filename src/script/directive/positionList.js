@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app').directive('appPositionList', ['cache','$http',function(cache,$http) {
+angular.module('app').directive('appPositionList', ['$http',function(cache,$http) {
 	return {
 		restrict: 'A',
 		replace: true,
@@ -8,9 +8,9 @@ angular.module('app').directive('appPositionList', ['cache','$http',function(cac
 		scope: { // 隔离作用域
 			data: '=',
 			filterObj: '=',
+			isFavorite: '=',
 		},
 		link: function($scope){
-			$scope.user = cache.getObj('user') || '';
 			$scope.select = function(item){
 				$http.post('/data/favorite.json',{
 					id: item.id,
